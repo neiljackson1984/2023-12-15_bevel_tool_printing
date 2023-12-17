@@ -691,3 +691,7 @@ git status
 
 git add .
 git commit -am "checkpoint"
+git gui
+braid push braids/makerbot_printable_maker
+
+git status
