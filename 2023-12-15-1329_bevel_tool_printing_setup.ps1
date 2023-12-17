@@ -678,3 +678,16 @@ findfileinprogramfiles *cura*.exe
 choco list --verbose cura-new
 get-command "UltiMaker-Cura"
 & "C:\Program Files\UltiMaker Cura 5.5.0\UltiMaker-Cura.exe"
+
+# push the tweaks that I made to makerbot_printable_maker to its repository.
+
+git status
+#%%
+@(
+    "/build"
+    "/transcripts"
+) > .gitignore
+#%%
+
+git add .
+git commit -am "checkpoint"
