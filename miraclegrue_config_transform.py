@@ -6,12 +6,13 @@ def transformMiraclegrueConfig(config: dict):
         del config['baseLayer']
     except:
         pass   
-    # the baseLayer propery is not part of the official miraclegrue config schema, but makerbot print tends to insert it anyway.    
+    # the baseLayer propery is not part of the official miraclegrue config
+    # schema, but makerbot print tends to insert it anyway.    
     
-    config['layerHeight'] = 0.2
+    config['layerHeight'] = 0.4
     config['floorSolidThickness'] = 0.4
     config['roofSolidThickness'] = 0.4
-    config['modelFillProfiles']['sparse']['density'] = 0.9
+    config['modelFillProfiles']['sparse']['density'] = 0.3
     config['doRaft'] = True
     config['doFixedShellStart'] = False
     config['doSupport'] = False

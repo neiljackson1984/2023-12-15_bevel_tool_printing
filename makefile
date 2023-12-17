@@ -68,7 +68,8 @@ ${buildFolder}/%.makerbot: ${pathOfThisMakefile}/%.thing ${pathOfMakePrintableSc
 
 ${buildFolder}/%.upload: ${buildFolder}/%
 	@echo "====== UPLOADING $< TO $(makerbotLinuxUsername)@$(makerbotAddress):${destinationDirectoryOnTheMakerbot}${uploadPrefix}$(notdir $<) ======= "
-	pscp "$(call getFullyQualifiedWindowsStylePath,$<)" "$(makerbotLinuxUsername)@$(makerbotAddress):${destinationDirectoryOnTheMakerbot}${uploadPrefix}$(notdir $<)"
+	# pscp "$(call getFullyQualifiedWindowsStylePath,$<)" "$(makerbotLinuxUsername)@$(makerbotAddress):${destinationDirectoryOnTheMakerbot}${uploadPrefix}$(notdir $<)"
+	scp "$<" "$(makerbotLinuxUsername)@$(makerbotAddress):${destinationDirectoryOnTheMakerbot}${uploadPrefix}$(notdir $<)"
 	touch "$@"
 	
 # .PHONY: upload
