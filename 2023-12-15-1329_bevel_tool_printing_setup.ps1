@@ -695,3 +695,37 @@ git gui
 braid push braids/makerbot_printable_maker
 
 git status
+braid push --help
+braid help
+braid push --help
+git remote -v
+
+pla filament. 1.75mm diameter.  1 kilogram per spool.
+
+<#
+    green
+    $17.00 per spool
+    https://www.amazon.com/dp/B07JQHXW1W
+
+    grey
+    $14.99 per spool
+    https://www.amazon.com/dp/B0834W5L3L
+
+    white
+    $12.75 per spool
+    https://www.amazon.com/dp/B0C6T3Y6SW
+
+    black
+    $10.00 per spool
+    cardboard spool
+    https://www.amazon.com/dp/B0BGHDWF2D
+
+    blue
+    $11.28 per spool
+    cardboard spool
+    https://www.amazon.com/dp/B0C583S6PR
+
+#>
+
+getAmazonAddToCartUrl @(,@("B0BGHDWF2D",1)) | set-clipboard
+https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0C6T3Y6SW&Quantity.1=1
